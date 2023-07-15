@@ -1,0 +1,26 @@
+.submitButton {
+    display: block;
+    margin-top: 10px;
+    margin-left: 693px;
+}
+
+table {
+    width: 70%;
+    text-align: left;
+  }
+  table, th, td, tr {
+    border: 1px solid black;
+    border-collapse: collapse;
+    height: 2.15em;
+  }
+  th, td {
+    padding: .5em;
+    min-width: 3.5em;
+  }
+
+  h2 {
+    text-align: right;
+    margin-right: 45%;
+  }
+
+ 
