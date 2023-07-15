@@ -3,6 +3,7 @@ $(document).ready(onReady);
 function onReady() {
   console.log('Hey jQuery!');
   $('.submitButton').on('click', handleSubmit) //This line of code accesses the .submitButton, and on 'click' will run handleSubmit function
+  $('#tableInfo').on('click', '#deleteButton', deleteInfo)
   
 }
 
@@ -19,13 +20,13 @@ function handleSubmit(event) { //function with 'handleSubmit' identifier and 'ev
     const jobTitle = $("#jobTitle").val();
     let annualSalary = $("#annualSalary").val();
     $("#tableInfo").append(`
-  <tr>
+  <tr class="tableData">
     <td>${firstName}</td>
     <td>${lastName}</td>
     <td>${idNumber}</td>
     <td>${jobTitle}</td>
     <td>${annualSalary}</td>
-    <td><button>Delete</button</td>
+    <td><button id="deleteButton">Delete</button</td>
   </tr> `)
     $('span').remove();
     monthlySalary += annualSalary / 12
@@ -38,14 +39,13 @@ function handleSubmit(event) { //function with 'handleSubmit' identifier and 'ev
     $('#totalMonthly').append(`<span id="total">$${Math.floor(monthlySalary).toLocaleString()}</span>`)
     }
     $('#myForm')[0].reset();
-   
+}
 
-    
+function deleteInfo() {
+  console.log('inside deleteInfo')
+  $(this).parent().parent().remove();
 
-    
 
-
-    
 }
 
 
