@@ -25,7 +25,7 @@ function handleSubmit(event) { //function with 'handleSubmit' identifier and 'ev
     <td>${lastName}</td>
     <td>${idNumber}</td>
     <td>${jobTitle}</td>
-    <td>${annualSalary}</td>
+    <td>$${Math.floor(annualSalary).toLocaleString()}</td>
     <td><button id="deleteButton">Delete</button</td>
   </tr> `)
     $('span').remove();
