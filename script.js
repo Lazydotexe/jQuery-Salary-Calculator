@@ -2,47 +2,77 @@ $(document).ready(onReady);
 
 function onReady() {
   console.log('Hey jQuery!');
-  $('#fireButton').on('click', addFire)
-  $('#iceButton').on('click', addIce)
-  $('.submit-button').on('click', handleSubmit)
-  $('#tableAffirm').on('click', '#affirmRow', deleteRow)
+  
 }
 
-let fireEmoji = '🔥'
-let iceEmoji = '❄️'
 
-function addFire() {
-  console.log(fireEmoji)
-  $('#magicalDiv').append(` 
-  <span> ${fireEmoji} </span>`);
-  // Potential alternative 👇
-  // // $('#magicalDiv').append( `  
-  // <span class="fireEmoji">🔥</span>`);
-}
 
-function addIce() {
-  console.log(iceEmoji)
-  $('#magicalDiv').append(` 
-  <span> ${iceEmoji} </span>`);
-}
 
-function handleSubmit(event) {
-  event.preventDefault();
-  console.log('in handleSubmit')
-  const affImput = $("#affirmInput").val();
-  const authorImput = $("#authorInput").val();
 
-  console.log('toDoText', affImput)
-  $("#tableAffirm").append(`
-  <tr id= "affirmRow">
-    <td>${affImput}</td>
-    <td>${authorImput}</td>
-    <td><button>❌</button</td>
-  </tr> `)
-}
 
-function deleteRow(){
-  console.log('inside deleteRow', $(this))
-  $(this).remove()
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const employeesData = [{
+//     firstName: "Jenn",
+//     lastName: "Flemming",
+//     idNumber: 8675309,
+//     jobtitle: "Head of Operations",
+//     annualSalary: 1500000
+// },{
+//     firstName: "Andrew",
+//     lastName: "Cannon",
+//     idNumber: 8008,
+//     jobtitle: "Web Developer",
+//     annualSalary: 70000
+// },{
+//     firstName: "John",
+//     lastName: "Cena",
+//     idNumber: 7337,
+//     jobtitle: "Janitor",
+//     annualSalary: 40000
+// },{
+//     firstName: "Bobby",
+//     lastName: "Flay",
+//     idNumber: 12345,
+//     jobtitle: "Driver",
+//     annualSalary: 30000
+// },
+// ]
+
+// console.log(employeesData);
