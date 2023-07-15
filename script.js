@@ -7,16 +7,17 @@ function onReady() {
 }
 
 
+let monthlySalary = 0; // To correctly add the monthly salary to itself in each iteration of the handleSubmit function, i needed to move the monthlySalary variable outside the function scope
+
 function handleSubmit(event) { //function with 'handleSubmit' identifier and 'event' perameter
     event.preventDefault(); // this line will cancel any default code that html will try to run due to the form element.
     
-    let monthlySalary = 0;
     console.log('inside of handleSubmit') // testing to see if the function is getting run....It is.
     const firstName = $("#firstName").val();
     const lastName = $("#lastName").val();
     const idNumber = $("#idNumber").val();
     const jobTitle = $("#jobTitle").val();
-    const annualSalary = $("#annualSalary").val();
+    let annualSalary = $("#annualSalary").val();
     $("#tableInfo").append(`
   <tr>
     <td>${firstName}</td>
@@ -26,8 +27,12 @@ function handleSubmit(event) { //function with 'handleSubmit' identifier and 'ev
     <td>${annualSalary}</td>
     <td><button>Delete</button</td>
   </tr> `)
+    $('#monthlyTotal').remove();
     monthlySalary += annualSalary / 12
-    $('#totalMonthly').append(`$${Math.floor(monthlySalary).toLocaleString()}`)
+
+    $('#totalMonthly').append(`<span id="monthlyTotal">$${Math.floor(monthlySalary).toLocaleString()}</span>`)
+
+    
 
 
     
