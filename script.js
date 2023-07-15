@@ -2,7 +2,14 @@ $(document).ready(onReady);
 
 function onReady() {
   console.log('Hey jQuery!');
+  $('.submitButton').on('click', handleSubmit)
   
+}
+
+
+function handleSubmit(event) {
+    event.preventDefault();
+    console.log('inside of handleSubmit')
 }
 
 
