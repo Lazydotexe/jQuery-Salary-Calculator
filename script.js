@@ -2,14 +2,35 @@ $(document).ready(onReady);
 
 function onReady() {
   console.log('Hey jQuery!');
-  $('.submitButton').on('click', handleSubmit)
+  $('.submitButton').on('click', handleSubmit) //This line of code accesses the .submitButton, and on 'click' will run handleSubmit function
   
 }
 
 
-function handleSubmit(event) {
-    event.preventDefault();
-    console.log('inside of handleSubmit')
+function handleSubmit(event) { //function with 'handleSubmit' identifier and 'event' perameter
+    event.preventDefault(); // this line will cancel any default code that html will try to run due to the form element.
+    
+    let monthlySalary = 0;
+    console.log('inside of handleSubmit') // testing to see if the function is getting run....It is.
+    const firstName = $("#firstName").val();
+    const lastName = $("#lastName").val();
+    const idNumber = $("#idNumber").val();
+    const jobTitle = $("#jobTitle").val();
+    const annualSalary = $("#annualSalary").val();
+    $("#tableInfo").append(`
+  <tr>
+    <td>${firstName}</td>
+    <td>${lastName}</td>
+    <td>${idNumber}</td>
+    <td>${jobTitle}</td>
+    <td>${annualSalary}</td>
+    <td><button>Delete</button</td>
+  </tr> `)
+    monthlySalary += annualSalary / 12
+    $('#totalMonthly').append(`$${Math.floor(monthlySalary).toLocaleString()}`)
+
+
+    
 }
 
 
