@@ -38,6 +38,7 @@ function handleSubmit(event) { //function with 'handleSubmit' identifier and 'ev
     $('#totalMonthly').append(`<span id="total">$${Math.floor(monthlySalary).toLocaleString()}</span>`)
     }
     $('#myForm')[0].reset();
+   
 
     
 
