@@ -27,10 +27,19 @@ function handleSubmit(event) { //function with 'handleSubmit' identifier and 'ev
     <td>${annualSalary}</td>
     <td><button>Delete</button</td>
   </tr> `)
-    $('#monthlyTotal').remove();
+    $('span').remove();
     monthlySalary += annualSalary / 12
+    if (monthlySalary >= 20000) {
+        console.log('monthley salary', monthlySalary)
+        $('span').addClass('yesRed');
+        $('#totalMonthly').append(`<span class="yesRed">$${Math.floor(monthlySalary).toLocaleString()}</span>`)
 
-    $('#totalMonthly').append(`<span id="monthlyTotal">$${Math.floor(monthlySalary).toLocaleString()}</span>`)
+    } else {
+    $('#totalMonthly').append(`<span id="total">$${Math.floor(monthlySalary).toLocaleString()}</span>`)
+    }
+    $('#myForm')[0].reset();
+
+    
 
     
 

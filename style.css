@@ -23,4 +23,6 @@ table {
     margin-right: 40%;
   }
 
- 
+ .yesRed {
+    background-color: red;
+ }
