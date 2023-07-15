@@ -1,7 +1,60 @@
+header{
+  border: 1px black solid;
+  text-align: center;
+  background-color: chocolate;
+  
+  
+}
+
+
+body {
+  background-color: beige;
+}
+
+main {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#tableInfo {
+  text-align: center;
+  margin-left: 200px;
+}
+ #headerTable {
+  margin-top: 100px;
+  margin-bottom: 300px;
+ }
+
+
+
+
+tr, tfoot {
+  background-color: orange;
+}
+
+
+
+#employeeInfo {
+  background-color: aqua;
+}
+
+
 .submitButton {
     display: block;
     margin-top: 10px;
-    margin-left: 693px;
+    margin-left: 1067px;
 }
 
 table {
