@@ -6,6 +6,7 @@ function onReady() {
   $('#tableInfo').on('click', '#deleteButton', deleteInfo)
   
 }
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 let monthlySalary = 0; // To correctly add the monthly salary to itself in each iteration of the handleSubmit function, i needed to move the monthlySalary variable outside the function scope
@@ -13,21 +14,27 @@ let monthlySalary = 0; // To correctly add the monthly salary to itself in each 
 function handleSubmit(event) { //function with 'handleSubmit' identifier and 'event' perameter
     event.preventDefault(); // this line will cancel any default code that html will try to run due to the form element.
     
-    console.log('inside of handleSubmit') // testing to see if the function is getting run....It is.
-    const firstName = $("#firstName").val();
-    const lastName = $("#lastName").val();
-    const idNumber = $("#idNumber").val();
-    const jobTitle = $("#jobTitle").val();
-    let annualSalary = $("#annualSalary").val();
-    $("#tableInfo").append(`
-  <tr class="tableData">
-    <td>${firstName}</td>
-    <td>${lastName}</td>
-    <td>${idNumber}</td>
-    <td>${jobTitle}</td>
-    <td>$${Math.floor(annualSalary).toLocaleString()}</td>
-    <td><button id="deleteButton">Delete</button</td>
-  </tr> `)
+    // console.log('inside of handleSubmit') 
+    const firstName = $("#firstName").val(); //----- These lines of code create a var equil the value jquey gets from the #first/last/id/job/annualSalary id's
+    const lastName = $("#lastName").val();  //------ it will hold this info to be use later in the code.
+    const idNumber = $("#idNumber").val(); //-------|
+    const jobTitle = $("#jobTitle").val();//--------|
+    let annualSalary = $("#annualSalary").val();//--|
+   
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   
+   
+    $("#tableInfo").append(`  //------| This line uses jquery to access the #tableInfo class and append or add the following table row and table data.
+  <tr class="tableData">     //-------|
+    <td>${firstName}</td>   //--------|
+    <td>${lastName}</td>   //---------|
+    <td>${idNumber}</td>  //----------|
+    <td>${jobTitle}</td> //-----------|
+    <td id="money">$${Math.floor(annualSalary).toLocaleString()}</td>//---|
+    <td><button id="deleteButton">Delete</button</td> 
+  </tr> `)  // -----------------------------------------------------------|
+
+
     $('span').remove();
     monthlySalary += annualSalary / 12
     if (monthlySalary >= 20000) {
@@ -42,8 +49,22 @@ function handleSubmit(event) { //function with 'handleSubmit' identifier and 'ev
 }
 
 function deleteInfo() {
-  console.log('inside deleteInfo')
+  // console.log('inside deleteInfo')
+  let removeSalary = $('#money').text()
+  let newSalary = parseInt(removeSalary.replace(/[$,]/g, "")) / 12
+  console.log(Math.floor(newSalary));
+  console.log(Math.floor(monthlySalary));
+  monthlySalary -= newSalary;
+  $('span').remove();
+
+  $('#totalMonthly').append(`<span id="total">$${Math.floor(monthlySalary).toLocaleString()}</span>`)
+
+
+
+  
   $(this).parent().parent().remove();
+  // console.log(this);
+  
 
 
 }
