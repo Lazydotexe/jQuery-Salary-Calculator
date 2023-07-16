@@ -21,7 +21,7 @@ function handleSubmit(event) { //function with 'handleSubmit' identifier and 'ev
   const jobTitle = $("#jobTitle").val();//--------| I think of it as, Hey jquery, look at #id name and grab its value and put it inside the variable i made.
   let annualSalary = $("#annualSalary").val();//--|
 
-  //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
 
 
   $("#tableInfo").append(`  
@@ -55,7 +55,7 @@ function handleSubmit(event) { //function with 'handleSubmit' identifier and 'ev
 
 
 
-// Line 74 sets removeSalary = this/<button> then targets the parant element (<td>) then 
+// Line 74 sets removeSalary = 'this'/<button> then targets the parant element (<td>) then 
 // targets the sibling of <td> that has the id #money and / .text() or gets / the string listed there
 
 // Line 75 has a lot going on...  .parseInt() converts a string to a int. like "26,000" to 26000. .replace()
@@ -72,7 +72,7 @@ function handleSubmit(event) { //function with 'handleSubmit' identifier and 'ev
 
 
 function deleteInfo() {
-  let removeSalary = $(this).parent().siblings("#money").text(); 
+  let removeSalary = $(this).parent().siblings("#money").text(); // Originally had - let removeSalary = $('#money').text() - I needed to be more specific in what i was accessing.
   let newSalary = parseInt(removeSalary.replace(/[$,]/g, "")) / 12;  
   monthlySalary -= newSalary;
   $('span').remove();

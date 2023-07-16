@@ -1,14 +1,14 @@
 header{
   border: 1px black solid;
   text-align: center;
-  background-color: chocolate;
+  background-color: rgb(52, 91, 234);
   
   
 }
 
 
 body {
-  background-color: beige;
+  background-color: rgb(235, 237, 231);
 }
 
 main {
@@ -35,6 +35,7 @@ main {
  #headerTable {
   margin-top: 100px;
   margin-bottom: 300px;
+  
  }
 
 
@@ -42,6 +43,10 @@ main {
 
 tr {
   background-color: orange;
+}
+
+.black {
+  border: 1px solid black;
 }
 
 
@@ -74,6 +79,10 @@ table {
   h2 {
     text-align: right;
     margin-right: 40%;
+  }
+
+  h3 {
+    margin-top: 100px;
   }
 
  .yesRed {
