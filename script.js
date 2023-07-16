@@ -19,8 +19,8 @@ function handleSubmit(event) { //function with 'handleSubmit' identifier and 'ev
   const lastName = $("#lastName").val();  //------ it will hold this info to be use later in the code.
   const idNumber = $("#idNumber").val(); //-------|
   const jobTitle = $("#jobTitle").val();//--------| I think of it as, Hey jquery, look at #id name and grab its value and put it inside the variable i made.
-  let annualSalary = $("#annualSalary").val();//--|
-
+  const annualSalary = $("#annualSalary").val();//--|
+  //MAKE SURE SETTING annualSalary TO A CONST WORKS!!!!
   
 
 
