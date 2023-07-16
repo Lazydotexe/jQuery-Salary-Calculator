@@ -24,15 +24,15 @@ function handleSubmit(event) { //function with 'handleSubmit' identifier and 'ev
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
    
    
-    $("#tableInfo").append(`  //------| This line uses jquery to access the #tableInfo class and append or add the following table row and table data.
-  <tr class="tableData">     //-------|
-    <td>${firstName}</td>   //--------|
-    <td>${lastName}</td>   //---------|
-    <td>${idNumber}</td>  //----------|
-    <td>${jobTitle}</td> //-----------|
-    <td id="money">$${Math.floor(annualSalary).toLocaleString()}</td>//---|
+    $("#tableInfo").append(`  
+  <tr class="tableData">     
+    <td>${firstName}</td>   
+    <td>${lastName}</td>   
+    <td>${idNumber}</td>  
+    <td>${jobTitle}</td> 
+    <td id="money">$${Math.floor(annualSalary).toLocaleString()}</td>
     <td><button id="deleteButton">Delete</button</td> 
-  </tr> `)  // -----------------------------------------------------------|
+  </tr> `)  
 
 
     $('span').remove();
