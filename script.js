@@ -22,7 +22,8 @@ function handleSubmit(event) { //function with 'handleSubmit' identifier and 'ev
   const annualSalary = $("#annualSalary").val();//--|
   //MAKE SURE SETTING annualSalary TO A CONST WORKS!!!!
   
-
+ // The code block below will access the #tableInfo if and append a table row with 4 tables of data. Each td has the variable that we pulled from above.
+ // Line 34 is rounding the annualSalary variable to get a whole number. It is then using .toLocalString to convert the int to a str (2000 - 2,000)
 
   $("#tableInfo").append(`  
   <tr class="tableData">     
@@ -34,6 +35,13 @@ function handleSubmit(event) { //function with 'handleSubmit' identifier and 'ev
     <td><button id="deleteButton">Delete</button</td> 
   </tr> `)
 
+
+ // Line 46 accesses the 'span' element and removes it
+ // monthlySalary is then added to the annualSalary variable and divided by 12
+ // We then run a if conditional that checks if the outcome is greater than or equil to 20000.
+ // If it is we then access the 'span element and add the yesRed class we made in css.
+ // We then access the #totalMonthly id and append a new span with the class .yesRed along with our rounded/comverted to a string variable.
+ // and If it is not greater then 20000 then the else statement runs followed by the for reset.
 
   $('span').remove();
   monthlySalary += annualSalary / 12
@@ -65,10 +73,10 @@ function handleSubmit(event) { //function with 'handleSubmit' identifier and 'ev
 // where you put what you want to replace with. In this case do not want the included to i just replace with an
 // empty string. Finally the whole varialbe is divided by 12
 
-// Line XX re defines monthlySalary = monthlySalary - newSalary
-// Line XX removes the whole <span> element including what it contains to prep for a new span to be put in its place
-// Line XX accesses #totalMonthly id and appends a new span element with a string interpolation of monthlySalary (rounded up and converted from a int to a string)
-// Line XX accesses (this) or the <button> and then targets the .closest <tr> element and removes it thus removing the whole row of info once delete it clicked.
+// Line 85 re defines monthlySalary = monthlySalary - newSalary
+// Line 86 removes the whole <span> element including what it contains to prep for a new span to be put in its place
+// Line 87 accesses #totalMonthly id and appends a new span element with a string interpolation of monthlySalary (rounded up and converted from a int to a string)
+// Line 88 accesses (this) or the <button> and then targets the .closest <tr> element and removes it thus removing the whole row of info once delete it clicked.
 
 
 function deleteInfo() {

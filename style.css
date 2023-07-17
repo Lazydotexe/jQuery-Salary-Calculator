@@ -40,14 +40,12 @@ main {
 
 
 
-
 tr {
-  background-color: orange;
+  background-color: crimson;
 }
 
-.black {
-  border: 1px solid black;
-}
+
+
 
 
 
@@ -87,5 +85,10 @@ table {
 
  .yesRed {
     background-color: red;
+ }
+
+ .noLines {
+  border: none;
+  background-color: black;
  }
 
