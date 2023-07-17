@@ -31,11 +31,14 @@ main {
 
 #tableInfo {
   text-align: center;
-  margin-left: 210px;
+  margin-left: 280px;
+  margin-top: 50px;
+  
 }
  #headerTable {
   margin-top: 100px;
   margin-bottom: 300px;
+  
   
  }
 
@@ -58,7 +61,7 @@ tr {
 .submitButton {
     display: block;
     margin-top: 10px;
-    margin-left: 1067px;
+    margin-left: 1338px;
 }
 
 table {
@@ -90,6 +93,6 @@ table {
 
  .noLines {
   border: none;
-  background-image: linear-gradient(rgb(6, 7, 7), rgba(135, 44, 44, 0.018), rgb(42, 23, 12));
+  background-image: linear-gradient(rgb(66, 241, 241), rgba(135, 44, 44, 0.018), rgb(252, 251, 250));
  }
 
