@@ -63,10 +63,10 @@ function handleSubmit(event) { //function with 'handleSubmit' identifier and 'ev
 
 
 
-// Line 74 sets removeSalary = 'this'/<button> then targets the parant element (<td>) then 
+// Line 83 sets removeSalary = 'this'/<button> then targets the parant element (<td>) then 
 // targets the sibling of <td> that has the id #money and / .text() or gets / the string listed there
 
-// Line 75 has a lot going on...  .parseInt() converts a string to a int. like "26,000" to 26000. .replace()
+// Line 84 has a lot going on...  .parseInt() converts a string to a int. like "26,000" to 26000. .replace()
 // will replace one thing for another. Coupled with the first / (expression) character and the [] which holds 
 // the items to be replaced followed by a g for global. The g lets the [ ] check basically for more then one occurance
 // so if the variable had multiple commas or other special characters it would catch them all. AFTER the comma is 
