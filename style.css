@@ -10,20 +10,31 @@ header{
 
 body {
   background-color: rgb(50, 145, 139);
+  margin: 10%;
 }
 
 main {
   text-align: center;
+  margin: 10%;
+}
+
+
+
+#myForm {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  
+  
 }
 
 
 
 
-
-
-
-
-
+.tableSection {
+  position: relative;
+  
+}
 
 
 
@@ -31,11 +42,13 @@ main {
 
 #tableInfo {
   text-align: center;
-  margin-left: 280px;
-  margin-top: 50px;
+  margin: auto;
+  
   
 }
- #headerTable {
+ 
+
+#headerTable {
   margin-top: 100px;
   margin-bottom: 300px;
   
@@ -44,7 +57,8 @@ main {
 
 
 
-tr {
+
+ tr {
   background-color: rgb(144, 151, 237);
 }
 
@@ -61,7 +75,9 @@ tr {
 .submitButton {
     display: block;
     margin-top: 10px;
-    margin-left: 1338px;
+    margin-left: auto;
+    position: relative
+    
 }
 
 table {
@@ -85,6 +101,7 @@ table {
 
   h3 {
     margin-top: 100px;
+    
   }
 
  .yesRed {
